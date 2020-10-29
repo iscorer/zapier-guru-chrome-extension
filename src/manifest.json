@@ -1,0 +1,34 @@
+{
+  "name": "Zapier Guru Chrome Extension",
+  "version": "1.0",
+  "description": "Enhance Guru Extension for Zapier",
+  "manifest_version": 2,
+  "icons": {
+    "16": "assets/zapier-icon.png",
+    "48": "assets/zapier-icon.png",
+    "128": "assets/zapier-icon.png"
+  },
+  "permissions": [
+    "https://secure.helpscout.net/*",
+    "clipboardRead"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://secure.helpscout.net/*"],
+      "js": ["js/contentScript.js"]
+    }
+  ],
+  "commands": {
+    "copy-card-content": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "MacCtrl+Shift+C"
+      },
+      "description": "Copy Card Content"
+    }
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  }
+}
