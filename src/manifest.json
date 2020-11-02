@@ -1,7 +1,7 @@
 {
-  "name": "Zapier Guru Chrome Extension",
+  "name": "Guru Card Content Copy/Paster",
   "version": "1.0",
-  "description": "Enhance Guru Extension for Zapier",
+  "description": "Allows you to configure keyboard shortcuts to copy and automatically paste Guru Card contents.",
   "manifest_version": 2,
   "icons": {
     "16": "assets/zapier-icon.png",
@@ -21,10 +21,17 @@
   "commands": {
     "copy-card-content": {
       "suggested_key": {
-        "default": "Ctrl+Shift+C",
-        "mac": "MacCtrl+Shift+C"
+        "default": "Ctrl+Comma",
+        "mac": "MacCtrl+Comma"
       },
-      "description": "Copy Card Content"
+      "description": "Copy card content to clipboard"
+    },
+    "copy-paste-card-content": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Comma",
+        "mac": "MacCtrl+Shift+Comma"
+      },
+      "description": "Copy card content and paste into Helpscout reply"
     }
   },
   "background": {
